@@ -9,6 +9,10 @@ TARGET DEVICE: TEENSY 3.1
     Thermocouple Board: MAX31855
     */
 
+/*To Do:
+	Need to add SD Card profile managment
+	Need to add Fan Control for heatsink. Start with Static
+*/
 
 #include <PID_v1.h>
 #include "Adafruit_MAX31855.h"
@@ -17,10 +21,22 @@ TARGET DEVICE: TEENSY 3.1
 
 
 //PIN DEFINITIONS -----------------------------------------------------------
-#define RELAY_PIN	
+//Thermocouple
 #define MAXDO	3
 #define MAXCS	4
 #define MAXCLK	5
+//LCD
+#define LCDEN
+#define LCDRS
+#define D4LCD
+#define D5LCD
+#define D6LCD
+#define D7LCD
+//Relay
+#define RELAY_PIN
+//Fan
+#define FANPIN
+
 //--------------------------------------------------------------------------
 
 //INITIALIZE THERMOCOUPLE----------------------------------------------------
