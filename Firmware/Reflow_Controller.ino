@@ -12,6 +12,10 @@ TARGET DEVICE: TEENSY 3.1
 /*To Do:
 	Need to add SD Card profile managment
 	Need to add Fan Control for heatsink. Start with Static
+	Define function for buzzer start
+	Define functon for buzzer stop
+	Detect SD Card input
+	Interrupt on reset pin
 */
 
 #include <PID_v1.h>
@@ -42,6 +46,10 @@ TARGET DEVICE: TEENSY 3.1
 #define SDDOUT 8 //input to microcontroller
 #define SDCLK 14
 #define SDCS 15
+#define SDDET 1
+//Reset
+#define RESETPIN 0
+//Buzzer - analog a14 12 bit analog output
 
 //--------------------------------------------------------------------------
 
@@ -97,7 +105,8 @@ uint32_t stateChangedTicks = 0;
 
 
 void setup() {
-  // put your setup code here, to run once:
+  //buzzer setup
+  analogWriteResolution(12);
 
 }
 
