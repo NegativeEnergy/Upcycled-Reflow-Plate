@@ -22,20 +22,21 @@ TARGET DEVICE: TEENSY 3.1
 
 //PIN DEFINITIONS -----------------------------------------------------------
 //Thermocouple
-#define MAXDO	3
-#define MAXCS	4
-#define MAXCLK	5
+#define MAXDO	12 //input to microcontroller
+#define MAXCS	10
+#define MAXCLK	13
 //LCD
-#define LCDEN
-#define LCDRS
-#define D4LCD
-#define D5LCD
-#define D6LCD
-#define D7LCD
+#define LCDEN 14
+#define LCDRS 15
+#define D4LCD 16
+#define D5LCD 17
+#define D6LCD 18
+#define D7LCD 19
 //Relay
-#define RELAY_PIN
+#define RELAY_PIN 22 //not sure I need PWM for this depends on PID library
 //Fan
-#define FANPIN
+#define FANPIN 23
+#define FANSENSE 3 //will need to use FreqMeasure Library Teensy
 
 //--------------------------------------------------------------------------
 
